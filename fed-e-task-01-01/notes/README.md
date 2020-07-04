@@ -26,33 +26,33 @@
 
 ## 目录
 
-- [函数是一等公民(First-class Function)](first-class-function/README.md)
+- [函数是一等公民(First-class Function)](first-class-function)
 
-- [高阶函数(Higher-order function)](higher-order-function/README.md)
+- [高阶函数(Higher-order function)](higher-order-function)
 
-- [闭包(Closure)](closure/README.md)
+- [闭包(Closure)](closure)
 
-- [纯函数(Pure Functions)](pure-functions/README.md)
+- [纯函数(Pure Functions)](pure-functions)
 
-- [柯里化 (Haskell Brooks Curry)](curry/README.md)
+- [柯里化 (Haskell Brooks Curry)](curry)
 
-- [函数组合(compose)](compose/README.md)
+- [函数组合(compose)](compose)
 
-- [Point Free](point-free/README.md)
+- [Point Free](point-free)
 
-- [函子(Functor)](functor/README.md)
+- [函子(Functor)](functor)
 
-- [MayBe 函子](maybe/README.md)
+- [MayBe 函子](maybe)
 
-- [Either 函子](either/README.md)
+- [Either 函子](either)
 
-- [IO 函子](io/README.md)
+- [IO 函子](io)
 
-- [Task 函子](task/README.md)
+- [Task 函子](task)
 
-- [Monad 函子](monad/README.md)
+- [Monad 函子](monad)
 
-- [Promise](promise/README.md)
+- [Promise](promise)
 
 ## 附录
 
