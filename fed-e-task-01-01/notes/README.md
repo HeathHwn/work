@@ -54,6 +54,12 @@
 
 - [Synchronous 同步](synchronous)
 
+- [Promise](promise)
+
+- [Generator （生成器）](generator)
+
+- [Async 函数](async-await)
+
 - [手写 Promise](my-promise)
 
 ## 附录
