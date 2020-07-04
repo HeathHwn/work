@@ -255,7 +255,7 @@ class Promise {
 const resolvePromise = (promise, result, resolve, reject) => {
   // 判断promise与result是否相等，如果相等，则是promise循环调用，这里应该抛出异常，并阻止往下执行
   if (promise === result) {
-    return reject(new TypeError('Chaining cycle detected for promise'));
+    return reject(new TypeError('Chaining cycle detected for my-promise'));
   }
   // 判断result是普通对象还是属于Promise对象
   if (result instanceof Promise) {

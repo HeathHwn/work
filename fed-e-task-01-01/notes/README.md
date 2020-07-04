@@ -52,7 +52,9 @@
 
 - [Monad 函子](monad)
 
-- [Promise](promise)
+- [Synchronous 同步](synchronous)
+
+- [手写 Promise](my-promise)
 
 ## 附录
 

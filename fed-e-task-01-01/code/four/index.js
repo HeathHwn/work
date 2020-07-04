@@ -1,22 +1,47 @@
-const common = require('./common');
+const Promise = require('./promise');
+
+const Ajax = (url) => {
+  // promise方式Ajax使用
+  return new Promise((resolve, reject) => {
+    let xhr = new XMLHttpRequest();
+    xhr.open('get', url);
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+      if (this.status === 200) {
+        resolve(this.response);
+      } else {
+        reject(new Error(this.statusText));
+      }
+    };
+    xhr.send();
+  });
+};
 // Promise基本使用
-common.BasicUse();
+let promise = new Promise((resolve, reject) => {
+  // resolve('成功');
+  reject('失败');
+});
+
+promise
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((e) => console.error(e));
 // promise方式Ajax使用
-common.Ajax('fed-e-task-01-01/notes/promise/api/user.json').then(
+Ajax('fed-e-task-01-01/notes/promise/api/user.json').then(
   (value) => {
     console.log(value);
   },
   (e) => {
-    console.log(e);
+    console.error(e);
   },
 );
 
 // promise链式调用
-common
-  .Ajax('fed-e-task-01-01/notes/promise/api/user.json')
+Ajax('fed-e-task-01-01/notes/promise/api/user.json')
   .then((value) => {
     console.log(value);
-    return common.Ajax('fed-e-task-01-01/notes/promise/api/class.json');
+    return Ajax('fed-e-task-01-01/notes/promise/api/class.json');
   })
   .then((value) => {
     console.log(value);
@@ -49,7 +74,7 @@ const promise5 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, 'two');
 });
 
-Promise.race(['1', promise4, promise5]).then((value) => {
+Promise.race([promise4, '1', promise5]).then((value) => {
   console.log(value);
   // Both resolve, but promise2 is faster
 });
