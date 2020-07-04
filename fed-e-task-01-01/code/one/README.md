@@ -2,7 +2,7 @@
 
 ## 题目
 
-![note](https://github.com/HeathHwn/work/tree/master/fed-e-task-01-01/code/one/topic.jpg)
+![note](./topic.jpg)
 
 ## 解答
 

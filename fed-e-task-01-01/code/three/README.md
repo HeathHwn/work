@@ -2,23 +2,23 @@
 
 ## 题目
 
-![note](https://github.com/HeathHwn/work/tree/master/fed-e-task-01-01/code/three/topic.png)
+![note](./topic.png)
 
 ### 练习 1
 
-![note](https://github.com/HeathHwn/work/tree/master/fed-e-task-01-01/code/three/topic1.png)
+![note](./topic1.png)
 
 ### 练习 2
 
-![note](https://github.com/HeathHwn/work/tree/master/fed-e-task-01-01/code/three/topic2.png)
+![note](./topic2.png)
 
 ### 练习 3
 
-![note](https://github.com/HeathHwn/work/tree/master/fed-e-task-01-01/code/three/topic3.png)
+![note](./topic3.png)
 
 ### 练习 4
 
-![note](https://github.com/HeathHwn/work/tree/master/fed-e-task-01-01/code/three/topic4.png)
+![note](./topic4.png)
 
 ```javascript
 const fp = require('lodash/fp');
