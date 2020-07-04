@@ -74,7 +74,7 @@ const promise5 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, 'two');
 });
 
-Promise.race([promise4, '1', promise5]).then((value) => {
+Promise.race([promise4, promise5]).then((value) => {
   console.log(value);
   // Both resolve, but promise2 is faster
 });
