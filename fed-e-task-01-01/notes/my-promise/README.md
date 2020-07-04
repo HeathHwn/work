@@ -266,6 +266,7 @@ class Promise {
    * @returns {Promise}
    */
   static resolve(value) {
+    // 判断value是否是Promise对象，是则直接返回，否则创建Promise对象并返回
     if (value instanceof Promise) return value;
     return new Promise((resolve) => resolve(value));
   }
@@ -276,6 +277,7 @@ class Promise {
    * @returns {Promise}
    */
   static reject(value) {
+    // 判断value是否是Promise对象，是则直接返回，否则创建Promise对象并返回
     if (value instanceof Promise) return value;
     return new Promise((undefined, reject) => reject(value));
   }
@@ -410,9 +412,9 @@ const promise5 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, 'two');
 });
 
-Promise.race([promise4, '1', promise5]).then((value) => {
+Promise.race([promise4, promise5]).then((value) => {
   console.log(value);
-  // Both resolve, but promise2 is faster
+  // Both resolve, but promise5 is faster
 });
 
 /**
