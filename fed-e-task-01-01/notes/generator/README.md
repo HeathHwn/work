@@ -44,10 +44,6 @@ console.log(gen.next().value);
 
 - 返回给定的值并结束生成器。
 
-> Generator.prototype.throw()
-
-- 向生成器抛出一个错误。
-
 ```javascript
 const arr = [1, 2, 3];
 function* idMaker() {
@@ -70,6 +66,10 @@ console.log(gen.next().value);
  * undefined
  */
 ```
+
+> Generator.prototype.throw()
+
+- 向生成器抛出一个错误。
 
 ```javascript
 const arr = [1, 2, 3];

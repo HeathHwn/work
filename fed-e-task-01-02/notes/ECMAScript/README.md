@@ -18,3 +18,4 @@ ECMAScript 是形成 JavaScript 语言基础的脚本语言。ECMAScript 是由 
 - [Map](map)
 - [Symbol](symbol)
 - [Iterator(迭代协议)](iterator)
+- [Generator(生成器)](../../../fed-e-task-01-01/notes/generator)
