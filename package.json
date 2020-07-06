@@ -18,6 +18,7 @@
     "folktale": "^2.3.2",
     "html-webpack-plugin": "^4.3.0",
     "lodash": "^4.17.15",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
