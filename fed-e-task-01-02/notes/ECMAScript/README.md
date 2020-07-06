@@ -17,3 +17,4 @@ ECMAScript 是形成 JavaScript 语言基础的脚本语言。ECMAScript 是由 
 - [Set](set)
 - [Map](map)
 - [symbol](symbol)
+- [Iterator(迭代协议)](iterator)
