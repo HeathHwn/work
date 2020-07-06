@@ -3,3 +3,4 @@
 ## 目录
 
 - [ECMAScript](ECMAScript)
+- [TypeScript](TypeScript)
