@@ -42,14 +42,24 @@ babel 输入需剔除的文件或文件夹路径 -d 输出文件夹
 npm install --save-dev flow-bin
 ```
 
+将"flow"脚本添加到您的 package.json：
+
+```json
+{
+  "scripts": {
+    "flow": "flow"
+  }
+}
+```
+
 首次安装后，需要先初始化
 
 ```text
-flow init
+npm run flow init
 ```
 
 init 之后，运行 flow
 
 ```text
-flow
+npm run flow
 ```
