@@ -1,40 +1,10 @@
 # 作业
 
-## 学习笔记目录
+## 目录
 
-- [第一模块笔记](./fed-e-task-01-01/notes/README.md)
+### Part 1 · JavaScript 深度剖析
 
-## 简答题
+本阶段主要围绕 JavaScript 语言本身以及它的周边语言进行深度介绍，让你从深度和广度两方面更深入掌握 JavaScript 这门语言以及相关编程范式，夯实前端开发基础，从而应对大型复杂应用开发，同时也为后期的高阶内容打下坚实的基础。
 
-Event Loop 用于等待和发送消息和事件。
-Event Loop 它最主要是分三部分：主线程、宏任务（macrotask）、微任务（microtask）
-
-### 宏任务
-
-宏任务，macrotask，也叫 tasks。 一些异步任务的回调会依次进入 macro task queue，等待后续被调用，这些异步任务包括：
-
-- setTimeout
-- setInterval
-- setImmediate
-- I/O
-- UI rendering
-
-### 微任务
-
-微任务，microtask，也叫 jobs。 另一些异步任务的回调会依次进入 micro task queue，等待后续被调用，这些异步任务包括：
-
-- Promise
-- Object.observe
-- MutationObserver
-- process.nextTick
-
-### 执行顺序
-
-主线程 > 微任务 > 宏任务
-
-## 代码题
-
-- [第一题](./fed-e-task-01-01/code/one)
-- [第二题](./fed-e-task-01-01/code/two)
-- [第三题](./fed-e-task-01-01/code/three)
-- [第四题](./fed-e-task-01-01/code/four)
+- [Part 1·模块一·函数式编程与 JS 异步编程、手写 Promise](./fed-e-task-01-01/README.md)
+- [Part 1·模块二·ES 新特性与 TypeScript、JS 性能优化](./fed-e-task-01-02/README.md)

@@ -2,5 +2,8 @@
 
 ## 目录
 
-- [ECMAScript](ECMAScript)
-- [TypeScript](TypeScript)
+- [ECMAScript](ecma-script)
+- [类型系统](type-system)
+- [Flow](flow)
+- [TypeScript](type-script)
+- [JavaScript 性能优化](optimization)

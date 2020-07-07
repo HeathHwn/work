@@ -71,7 +71,7 @@ npm run flow
 ```javascript
 /**
  * Type Annotations(类型注解)
- * @flow
+ * flow
  */
 // 参数添加类型注解
 function add(x: number, y: number) {
