@@ -50,7 +50,7 @@ index.js
 var test = function (name) {
   return console.log('hello ' + name);
 };
-test(type - script);
+test('typescript');
 ```
 
 ## 配置
