@@ -2,23 +2,23 @@
 
 ## 题目
 
-![note](./topic.png)
+![note](img/topic.png)
 
 ### 练习 1
 
-![note](./topic1.png)
+![note](img/topic1.png)
 
 ### 练习 2
 
-![note](./topic2.png)
+![note](img/topic2.png)
 
 ### 练习 3
 
-![note](./topic3.png)
+![note](img/topic3.png)
 
 ### 练习 4
 
-![note](./topic4.png)
+![note](img/topic4.png)
 
 ```javascript
 const fp = require('lodash/fp');

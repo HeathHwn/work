@@ -2,7 +2,7 @@
 
 ## 题目
 
-![note](./topic.jpg)
+![note](img/topic.jpg)
 
 ## 解答
 

@@ -2,23 +2,23 @@
 
 ## 题目
 
-![Alt text](./topic.jpg)
+![Alt text](img/topic.jpg)
 
 ### 练习一
 
-![Alt text](./topic1.jpg)
+![Alt text](img/topic1.jpg)
 
 ### 练习二
 
-![note](./topic2.jpg)
+![note](img/topic2.jpg)
 
 ### 练习三
 
-![Alt text](./topic3.jpg)
+![Alt text](img/topic3.jpg)
 
 ### 练习四
 
-![Alt text](./topic4.jpg)
+![Alt text](img/topic4.jpg)
 
 ```javascript
 const fp = require('lodash/fp');
