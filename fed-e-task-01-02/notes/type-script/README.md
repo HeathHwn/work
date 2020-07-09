@@ -1,6 +1,6 @@
 # TypeScript
 
-TypeScript 是 JavaScript 的类型化超集，可编译为普通 JavaScript，支持 ECMAScript 6 标准，可运行在任何浏览器上。
+TypeScript 是 JavaScript 类型的超集，可编译为普通 JavaScript，支持 ECMAScript 6 标准，可运行在任何浏览器上。
 
 TypeScript 是渐进式的
 
