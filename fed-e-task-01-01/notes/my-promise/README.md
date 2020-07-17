@@ -2,23 +2,47 @@
 
 ## 描述
 
-Promise 对象是一个代理对象（代理一个值），被代理的值在 Promise 对象创建时可能是未知的。它允许你为异步操作的成功和失败分别绑定相应的处理方法（handlers）。 这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的 promise 对象
+1. Promise 是一个类，参数是一个执行器函数， 执行器函数自执行。
 
-> 一个 Promise 有以下几种状态:
+2. Promise 有 3 个状态 Pending 默认等待态 、Fulfilled 成功态 、Rejected 失败态 状态一改变就不能再次修改 Pending -> Fulfilled || Pending -> Rejected
 
-- pending: 初始状态，既不是成功，也不是失败状态。
+3. 执行器函数参数有 resolve 方法和 reject 方法 resolve 方法将 Pending 3.> Fulfilled reject 方法将 Rejected -> Rejected resolve 方法的参数将作为 then 方法成功回调的值， reject 方法的参数将作为 then 方法失败回调的原因。
 
-- fulfilled: 意味着操作成功完成。
+4. then 方法有两个参数 一个是成功回调的函数 successCallback，一个是失败回调的函数 failCallback。 promise 的成功态会将成功的值传给成功的回调并且执行，失败态会将失败的原因传递给失败的回调并执行。
 
-- rejected: 意味着操作失败。
+5. 执行器中 resolve 和 reject 在异步中执行的时候，当前状态还是等待态 需要把 then 方法的成功回调和失败回调存起来，等异步调用 resolve 的时候调用成功回调，reject 的时候调用失败回调
 
-pending 状态的 Promise 对象可能会变为 fulfilled 状态并传递一个值给相应的状态处理方法，也可能变为失败状态（rejected）并传递失败信息。当其中任一种情况出现时，Promise 对象的 then 方法绑定的处理方法（handlers ）就会被调用（then 方法包含两个参数：onfulfilled 和 onrejected，它们都是 Function 类型。当 Promise 状态为 fulfilled 时，调用 then 的 onfulfilled 方法，当 Promise 状态为 rejected 时，调用 then 的 onrejected 方法， 所以在异步操作的完成和绑定处理方法之间不存在竞争）。
+6. then 方法
 
-> Promise 创建时需传入 executor 函数
+   > a. then 方法多次调用添加多个处理函数；
 
-executor 是带有 resolve 和 reject 两个参数的函数 。Promise 构造函数执行时立即调用 executor 函数， resolve 和 reject 两个函数作为参数传递给 executor（executor 函数在 Promise 构造函数返回所建 promise 实例对象前被调用）。resolve 和 reject 函数被调用时，分别将 promise 的状态改为 fulfilled（完成）或 rejected（失败）。executor 内部通常会执行一些异步操作，一旦异步操作执行完毕(可能成功/失败)，要么调用 resolve 函数来将 promise 状态改成 fulfilled，要么调用 reject 函数将 promise 的状态改为 rejected。如果在 executor 函数中抛出一个错误，那么该 promise 状态为 rejected。executor 函数的返回值被忽略。
+   > b. 实现 then 的链式调用： then 方法链式调用识别 promise 自返回 then 链式调用 返回的是一个新的 promise 对象
 
-> then 方法链式调用，后面的 then 方法的回调函数的入参取自上一个 then 方法的回调函数的返回值
+   > c. 判断 then 方法成功回调和失败回调的返回值 x x 返回的是一个 pormise，判断 x 和当前 then 返回是不是同一个 promise,如果是同一个 promise 就报错。x 和 then 返回的不是同一个 promise,将 x 的 then 方法执行返回给下一个 then。 x 是常量直接当作下一个 then 的成功回调的参数。后面 then 方法的回调函数拿到值的是上一个 then 方法的回调函数的返回值。
+
+   > d.捕获错误及 then 链式调用其他状态代码补充
+
+   > e. then 方法的参数可选 ​
+
+   > f. then 方法的值穿透
+
+7. executor 执行器函数 / then 方法可能有错误，有错误直接调用 reject 方法
+
+8. all 和 race 方法的实现
+
+   > all 和 race 方法不管 promise 成功还是失败都不会影响其他 promise 执行 ​ all 方法返回一个新的 promise​ all 参数里面每一项执行完成，才把所有结果依次按原顺序 resolve 出去 ​ all 方法只要一个 promise 失败就 reject 失败的 promise 结果 ​ Promise.race 方法，谁执行的快就返回谁
+
+9. resolve 和 reject 方法的实现
+
+10. resolve 方法： 相当于实例化 Promise 对象，并且调用了 resolve 方法 reject 方法：相当于实例化 Promise 对象，并且调用了 reject 方法
+
+11. finally 方法的实现
+
+12. finally 的实现，不管是成功状态还是失败态都会进这个 finally 方法 (等待态不会进)。finally 方法会返回一个新的 promise，它拿不到上次 then 执行的结果(所以没有参数)，内部会手动执行一次 promise 的 then 方法。finally 方法有错误会把错误作为下次 then 方法的失败回调的参数。
+
+13. catch 方法的实现
+
+    > catch 方法相当于执行 then 方法的失败回调
 
 ## demo
 
