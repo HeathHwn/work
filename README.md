@@ -8,3 +8,7 @@
 
 - [Part 1·模块一·函数式编程与 JS 异步编程、手写 Promise](./fed-e-task-01-01)
 - [Part 1·模块二·ES 新特性与 TypeScript、JS 性能优化](./fed-e-task-01-02)
+
+### Part 2 · 前端工程化实战
+
+- [Part 2·模块一·开发脚手架及封装自动化构建工作流](./fed-e-task-02-01)
